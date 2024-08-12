@@ -24,10 +24,21 @@ concurrency:
 jobs:
   # Build job
   build:
+    strategy:
+      matrix:
+        node-version: ['18.x', '20.x']
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install npm ci dependency
+        run: npm ci
+      - name: npm install all
+        run: npm install
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
@@ -37,6 +48,8 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+      - name: start server and serve site
+        run: npm run start-with-server
 
   # Deployment job
   deploy:
