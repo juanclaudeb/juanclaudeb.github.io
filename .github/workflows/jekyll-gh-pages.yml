@@ -48,8 +48,6 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-      - name: Serve site
-        run: npm run start
 
   # Deployment job
   deploy:
