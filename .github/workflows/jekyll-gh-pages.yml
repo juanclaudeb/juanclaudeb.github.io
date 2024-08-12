@@ -34,7 +34,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Change to root directory
-        run: cd .\codelabs-homes-app-start\
+        run: cd codelabs-homes-app-start
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
