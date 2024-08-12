@@ -1,0 +1,22 @@
+{
+    "locations": [
+        {
+            "id": 0,
+            "name": "Test Product Item",
+            "description": "Fancy smancy item to sell 1",
+            "photo": "/assets/bernard-hermant-CLKGGwIBTaY-unsplash.jpg"
+        },
+        {
+            "id": 1,
+            "name": "Test Product Item2",
+            "description": "Another Fancy smancy item to sell!",
+            "photo": "/assets/brandon-griggs-wR11KBaB86U-unsplash.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Test Product Item3",
+            "description": "Fancy smancy item to sell, buy this now prease!!!",
+            "photo": "/assets/phil-hearing-IYfp2Ixe9nM-unsplash.jpg"
+        }
+    ]
+}
